@@ -1,6 +1,7 @@
 import requests
 import json
 from app import app
+from html import *
 
 @app.route('/')
 @app.route('/index')
@@ -18,5 +19,10 @@ def index():
     r_w = requests.get(send_url_w)
     j_w = json.loads(r_w.text)
     weather = j_w['weather'][0]
+    strMain = weather['main']
+    strDescription = weather['description']
+    strIcon = weather['icon']
     print(j_w['weather'])
-    return "<head><title>W E A T H E R</title></head><body><h1>Hello World!</h1><p>" + weather['main'] + ": " + weather['description'] + "</p></body>" 
+    #return "<head><title>W E A T H E R</title></head><body><h1>Hello World!</h1><p>" + weather['main'] + ": " + weather['description'] + "</p></body>" 
+
+    return one + strIcon + two + strMain + " with " + strDescription + three
