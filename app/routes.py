@@ -1,13 +1,13 @@
 import requests
 import json
 from app import app
-from html import *
+from WeatherHTML import *
+from apikey import appid
 
 @app.route('/')
 @app.route('/index')
 
 def index():
-    appid = 'c00636f4e12a151f9695c2ca582f9521'
 
     send_url_g = 'http://freegeoip.net/json'
     r_g = requests.get(send_url_g)
