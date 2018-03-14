@@ -23,6 +23,5 @@ def index():
     strDescription = weather['description']
     strIcon = weather['icon']
     print(j_w['weather'])
-    #return "<head><title>W E A T H E R</title></head><body><h1>Hello World!</h1><p>" + weather['main'] + ": " + weather['description'] + "</p></body>" 
 
     return one + strIcon + two + strMain + " with " + strDescription + three
