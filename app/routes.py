@@ -24,4 +24,7 @@ def index():
     strIcon = weather['icon']
     print(j_w['weather'])
 
-    return one + strIcon + two + strMain + " with " + strDescription + three
+    strIcon = '01d'
+    strColor = getBackgroundColorFromIcon(strIcon)
+    
+    return one + style_one + strColor + style_two + two + strIcon + three + strMain + " with " + strDescription + four
