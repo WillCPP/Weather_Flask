@@ -1,0 +1,24 @@
+div {
+    width: 80%;
+    /*background: white;*/
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+} 
+
+@keyframes fadeBackground {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: cadetblue;
+    }
+}
+
+body {
+    font-family: 'Lato';
+    font-size: 22px;
+    /* background-color: white; */
+    animation: 1s ease 0s 1 fadeBackground;
+    animation-fill-mode: forwards;
+}
