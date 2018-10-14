@@ -1,7 +1,7 @@
 # Weather_Flask
 Flask based weather web app
 
-Setup:
+## Setup
 
     1. Clone this repo
 
@@ -9,7 +9,7 @@ Setup:
 
     3. Place those keys into apikey.py
     
-To run:
+## To run
 
     1. Open a terminal and navigate into the root folder of the repo
 
