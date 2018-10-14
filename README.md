@@ -21,3 +21,9 @@ pipenv shell
 export FLASK_APP='Weather_Flask.py'
 flask run
 ```
+
+## Screenshot
+
+![screenshot][screenshot]
+
+[screenshot]: https://github.com/WillCPP/Weather_Flask/blob/master/media/screenshot.png
