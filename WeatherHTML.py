@@ -6,7 +6,7 @@ one = """<html>
 two ="""    </head>
             <body>
                 <div>
-                    <p><h1>The weather is probably</h1></p>
+                    <p><h1>The weather is</h1></p>
                     <img src="static/images/"""
 
 three = """.svg"><p><h1>"""

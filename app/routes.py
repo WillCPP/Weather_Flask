@@ -3,13 +3,18 @@ import json
 from app import app
 from WeatherHTML import *
 from apikey import appid
+from apikey import accesskey
 
 @app.route('/')
 @app.route('/index')
 
 def index():
 
-    send_url_g = 'http://freegeoip.net/json'
+    send_url_ip = 'https://www.myexternalip.com/raw'
+    r_ip = requests.get(send_url_ip)
+    s_ip = r_ip.text
+
+    send_url_g = 'http://api.ipstack.com/{}?access_key={}'.format(s_ip, accesskey)
     r_g = requests.get(send_url_g)
     j_g = json.loads(r_g.text)
     lat = j_g['latitude']
