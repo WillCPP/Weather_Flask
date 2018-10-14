@@ -1,0 +1,2 @@
+key_openweathermap='c00636f4e12a151f9695c2ca582f9521'
+key_ipstack='b76f5cd06ba023e9065a40c9a3ec7ed6'

@@ -2,8 +2,8 @@ import requests
 import json
 from app import app
 from WeatherHTML import *
-from apikey import appid
-from apikey import accesskey
+from apikeys import key_openweathermap
+from apikeys import key_ipstack
 
 @app.route('/')
 @app.route('/index')
@@ -14,13 +14,13 @@ def index():
     r_ip = requests.get(send_url_ip)
     s_ip = r_ip.text
 
-    send_url_g = 'http://api.ipstack.com/{}?access_key={}'.format(s_ip, accesskey)
+    send_url_g = 'http://api.ipstack.com/{}?access_key={}'.format(s_ip, key_ipstack)
     r_g = requests.get(send_url_g)
     j_g = json.loads(r_g.text)
     lat = j_g['latitude']
     lon = j_g['longitude']
 
-    send_url_w = 'http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid={}'.format(lat, lon, appid)
+    send_url_w = 'http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid={}'.format(lat, lon, key_openweathermap)
     r_w = requests.get(send_url_w)
     j_w = json.loads(r_w.text)
     weather = j_w['weather'][0]
