@@ -7,7 +7,7 @@ Flask based weather web app
 
 2. Get API keys from [ipstack.com](https://ipstack.com/) and [openweathermap.org](https://openweathermap.org/api)
 
-3. Place those keys into apikey.py
+3. Place those keys into apikeys.py
     
 ## To run
 
